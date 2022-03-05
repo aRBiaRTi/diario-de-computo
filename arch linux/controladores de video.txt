@@ -1,0 +1,7 @@
+pacman -S xf86-video
+
+pacman -S xf86-video-intel
+pacman -S xf86-video-nouveau
+pacman -S nvidia nvidia-utils
+pacman -S xf86-video-ati
+pacman -S xf86-video-vesa

@@ -1,0 +1,15 @@
+pacman -S virtualbox-guest-utils xorg xorg-server xorg-xinit
+pacman -S lightdm bspwm sxhkd dmenu tilix
+
+mkdir ~/.config/bspwm
+mkdir ~/.config/sxhkd
+
+cp /usr/share/doc/bspwm/examples/bspwm/bspwmrc ~/.config/bspwm/
+cp /usr/share/doc/bspwm/examples/bspwm/sxhkdrc ~/.config/sxhkd/
+# # terminal emulator
+# super + Return
+#         tilix
+
+nano ~/.xinitrc
+# sxhkd &&
+# exec bspwm

@@ -1,0 +1,86 @@
+PARTICIONAR
+
+fdisk -l
+fdisk /dev/sda
+
+n
+p
+1
+enter
++15G
+a
+1
+
+n
+e
+2
+enter
+enter
+
+n
+5
+enter
++10G
+
+n
+6
+enter
+enter
+t
+L
+82
+
+w
+
+ACTIVAR SWAP
+
+mkswap /dev/sda6
+swapon
+
+FORMATEAR
+
+mkswap /dev/sda1
+swapon /dev/sda1
+
+MONTAR
+
+mount
+mount /dev/sda1 /mnt
+mkdir /mnt/home
+mount /dev/sda6 /mnt/home
+
+INSTALAR
+
+pacstrap /mnt base linux linux-firmware grub networkmanager dhcpcd nano sudo
+genfstab /mnt >> /mnt/etc/fstab
+
+CONFIGURACION BASICA
+
+arch-chroot /mnt
+
+ln -sf /usr/share/zoneinfo/America/Mazatlan /etc/localtime
+hwclock --systohc
+
+echo KEYMAP=es > /etc/vconsole.con
+echo LANG=es_MX.UTF8 > /etc/locale.conf
+nano /etc/locale.gen	# es_MX.UTF8
+locale-gen
+
+echo vbox-arch > /etc/hostname
+echo "127.0.0.1 localhost" > /etc/host
+
+passwd
+useradd -m rbrt
+passwd rbrt
+EDITOR=nano visudo
+# rbrt ALL=(ALL) ALL
+# ...
+# %wheel ALL=(ALL:ALL) ALL
+
+GRUB
+
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+mkinitcpio -P
+
+LISTO!

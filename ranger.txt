@@ -1,0 +1,8 @@
+
+pacman -S ranger
+
+shift + s
+# abrir terminal
+
+exit
+# salir de la terminal

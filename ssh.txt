@@ -1,0 +1,9 @@
+
+ssh-keygen -t rsa -b 4096 -C "rbrt.nznz.vls@gmail.com"
+# t	permite crear el algoritmo rsa
+# b	asigna el tamano de la llave, el recomendado es 4096
+# C	anade un comentario, en este caso el email asociado
+
+nano /etc/ssh/sshd_config
+# PasswordAuthentication yes
+# ChallengeREsponseAuthentication no

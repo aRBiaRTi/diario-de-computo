@@ -1,0 +1,18 @@
+================================================================
+
+a r c h i v o   i s o
+
+- descarga de iso windows server 2016 mediante bittorrent
+- el torrent fue tomado de la pagina intercambiosvirtuales.org
+
+requisitos mínimos
+- 1.4GHz x64
+- 512MBs
+-
+
+maquina virtual
+- 1GB de ram
+- VHD dínamico de 50GBs
+- 
+
+================================================================

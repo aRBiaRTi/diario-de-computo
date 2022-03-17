@@ -1,0 +1,27 @@
+================================================================
+
+a r c h i v o   i s o
+
+- ubuntu-21.10-live-server-amd64.iso encontrado en ordenador de
+  aRBiaRTi
+
+r e q u i s i t o s    m í n i m o s
+
+- dual core 1.0GHz
+- 20GB de espacio en disco
+- 1GB de ram
+
+m a q u i n a   v i r t u a l
+
+- 1GB de ram
+- VHD dínamico de 20GBs
+- configuraciones > sistema > procesador > 2 CPUs
+- almacenamiento > unidad optica > seleccionar un archivo de
+  disco > ubuntu-21.10-live-server-amd64.iso
+- red > adaptador 1 > adaptador puente > "tarjeta de red"
+
+i n s t a l a c i ó n
+
+- 
+
+================================================================
